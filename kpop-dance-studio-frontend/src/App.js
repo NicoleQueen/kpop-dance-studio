@@ -128,7 +128,11 @@ class App extends Component {
   // )
   renderSchedulePage = () => (<ScheduleContainer/>)
   renderLoginPage = () => (<Login handleLogin={this.handleLogin} handleSignup={this.handleSignup}/>)
-  renderUserPage = () => (<UserContainer user={this.state.user} users={this.state.users}/>)
+  renderUserPage = () => (<UserContainer user={this.state.user} users={this.state.users}
+    instructors={this.state.instructors}
+    renderInstructorsPage={this.renderInstructorsPage}
+    renderSchedulePage={this.renderSchedulePage}
+    />)
 
   handleLogout = () => {
     this.setState(

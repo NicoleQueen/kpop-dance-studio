@@ -41,21 +41,46 @@ class Navbar extends Component {
             </div>
           </section>
 
+          {/* {this.props.userId ? (
+            <a class="navbar-brand" href="/" id='kpop'>
+            Kpop Dance Studio
+          </a>
+          ) : ( */}
 
           <a class="navbar-brand" href="/" id='kpop'>
             Kpop Dance Studio
           </a>
+          {/* )}  */}
+          {this.props.userId ? (
+            <a class="nav-link" href="user/instructor" id={"about1"} >
+            Instructor
+          </a>
+          ) : (
+
           <a class="nav-link" href="instructor" id={"about1"} >
             Instructor
           </a>
+          )}
+          {this.props.userId ? (
+            <a class="nav-link" href="user" id={"about2"} >
+            Schedule
+          </a>
+          ) : (
 
           <a class="nav-link" href="schedule" id={"about2"} >
             Schedule
           </a>
+          )}
+          {this.props.userId ? (
+            <a class="nav-link" href="user/pricing" id={"about3"}>
+            Pricing
+          </a>
+          ) : (
 
           <a class="nav-link" href="pricing" id={"about3"}>
             Pricing
           </a>
+          )}
           {this.props.userId ? (
             <div onClick={() => this.props.handleLogout()}>
               <a class="nav-link" href="/" id={"about4"} type="click" >

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../css/UserNav.css";
 
 class UserNav extends Component {
 
@@ -8,19 +9,30 @@ class UserNav extends Component {
     (item) => item.id === this.props.user.id
   );
    return (
-     <div>
+     <div className="UserNav">
        <img
            
               src={currentUser.length > 0 && currentUser[0].image}
-              width="39"
-              height="39"
+              width="150"
+              height="150"
               class="d-inline-block align-top"
               alt=""
               loading="lazy"
+              id="userImg"
+              
             />
-           <a>
-            {this.props.user.username}
+            
+           <a id="userName" class="nav-link" href="user/edit">
+            {this.props.user.username} 
           </a>
+            
+          <a class="nav-link" href="user/history" type="click" id="history">
+              History
+            </a>
+            <a class="nav-link" href="user/route" type="click" id="route">
+              Route
+            </a>
+
      </div>
    )
  }
@@ -30,6 +42,7 @@ class UserNav extends Component {
         className={"UserNav"}
         style={{
           borderBottom: "1.2px solid black",
+          borderLeft: "1.2px solid black",
           paddingBottom: 8,
           marginBottom: 10,
         }}
