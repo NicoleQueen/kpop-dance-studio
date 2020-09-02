@@ -1,9 +1,9 @@
 class CreateSchedules < ActiveRecord::Migration[6.0]
   def change
     create_table :schedules do |t|
-      t.datetime :start_time
-      t.datetime :end_time
-      t.string :date
+      t.string :time
+      t.string :video_url
+      t.date :date
       t.belongs_to :instructor, null: false, foreign_key: true
 
       t.timestamps

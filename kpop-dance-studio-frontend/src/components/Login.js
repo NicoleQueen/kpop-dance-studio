@@ -5,6 +5,7 @@ class Login extends React.Component {
     state = {
         username: "",
         password: "",
+        email: "",
     };
 
     handleChange = (e) => {
@@ -54,13 +55,16 @@ class Login extends React.Component {
                                 </div>
                             </form>
                             <div class="sign-up-htm">
+                            <form onSubmit={(e) => this.props.handleSignup(e, this.state)}>
                                 <div class="group">
                                     <label for="user" class="label">Username</label>
                                     <input id="user" type="text" class="input" />
                                 </div>
                                 <div class="group">
                                     <label for="pass" class="label">Password</label>
-                                    <input id="pass" type="password" class="input" data-type="password" />
+                                    <input id="pass" type="password" class="input" data-type="password" 
+                                        value={this.state.password}
+                                        onChange={this.handleChange}/>
                                 </div>
                                 <div class="group">
                                     <label for="pass" class="label">Repeat Password</label>
@@ -68,11 +72,14 @@ class Login extends React.Component {
                                 </div>
                                 <div class="group">
                                     <label for="pass" class="label">Email Address</label>
-                                    <input id="pass" type="text" class="input" />
+                                    <input id="pass" type="text" class="input" 
+                                        value={this.state.email}
+                                        onChange={this.handleChange}/>
                                 </div>
                                 <div class="group">
                                     <input type="submit" class="button" value="Sign Up" />
                                 </div>
+                                </form>
                                 <div class="hr"></div>
                                 <div class="foot-lnk">
                                     <label for="tab-1"><a>Already Member?</a></label>

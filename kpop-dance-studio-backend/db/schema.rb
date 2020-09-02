@@ -45,9 +45,9 @@ ActiveRecord::Schema.define(version: 2020_08_27_173116) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.string "start_time"
-    t.string "end_time"
-    t.string "date"
+    t.string "time"
+    t.string "video_url"
+    t.date "date"
     t.bigint "instructor_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

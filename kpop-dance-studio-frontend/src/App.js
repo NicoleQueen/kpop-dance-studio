@@ -13,6 +13,7 @@ import UserContainer from "./containers/UserContainer.js";
 
 import { Redirect } from "react-router-dom";
 import { Route, Switch, NavLink, withRouter } from "react-router-dom";
+import ShowVideo from "./components/ShowVideo";
 
 class App extends Component {
   state = {
@@ -23,10 +24,14 @@ class App extends Component {
     },
     instructors: [],
     users: [],
+    schedules: [],
+    schedule: null,
+    bookingSchedule: null,
   }
   componentDidMount() {
     this.fetchChannels();
     this.fetchUsers();
+    this.fetchSchedules();
 
     if (localStorage.token) {
       fetch("http://localhost:3000/persist", {
@@ -80,6 +85,7 @@ class App extends Component {
         
         if (!json.error) {
           this.handleAuthResponse(json);
+          // this.props.history.push("/user");
         } else {
           alert(json.error);
         }
@@ -122,17 +128,63 @@ class App extends Component {
       .then((data) => this.setState({ users: data }));
   };
 
+  fetchSchedules = () => {
+    fetch(`http://localhost:3000/schedules`)
+      .then((res) => res.json())
+      .then((data) => this.setState({ schedules: data }));
+  };
+
   renderInstructorsPage = () => (<InstructorContainer instructors={this.state.instructors}/> )
   // handleInstructorsPage = () => (
   //   <Redirect to={'/instructor'}/>
   // )
-  renderSchedulePage = () => (<ScheduleContainer/>)
+  showVideoPage = (schedule) => {
+    // console.log(schedule)
+    // <Redirect to={'/user/video'}/>
+    this.state.user.id ? (
+      this.setState({ schedule: schedule }) &&
+      this.props.history.push("/user/video")
+    ) : (
+      this.props.history.push("/login")
+    )
+    // this.setState({ schedule: schedule })
+    // return <Redirect to={'/user/video'}/>
+      // this.props.history.push("/user/video")
+    
+
+  }
+
+  showPaymentPage = () => {
+    this.state.user.id ? (
+      // this.setState({ schedule: schedule }) &&
+      this.props.history.push("/user/pay")
+    ) : (
+      this.props.history.push("/login")
+    )
+  }
+
+  handleBooking = (s) => {
+    console.log(s)
+    this.setState({ bookingSchedule: s })
+    // this.props.history.push("/user/history")
+  }
+  renderVideoPage = () => {
+    return <ShowVideo schedule={this.state.schedule} handleBooking={this.handleBooking}/>
+  }
+
+  
+  
+  renderSchedulePage = () => (<ScheduleContainer schedules={this.state.schedules} showVideoPage={this.showVideoPage}/>)
   renderLoginPage = () => (<Login handleLogin={this.handleLogin} handleSignup={this.handleSignup}/>)
   renderUserPage = () => (<UserContainer user={this.state.user} users={this.state.users}
     instructors={this.state.instructors}
     renderInstructorsPage={this.renderInstructorsPage}
     renderSchedulePage={this.renderSchedulePage}
+    showVideoPage={this.showVideoPage}
+    renderVideoPage={this.renderVideoPage}
+    bookingSchedule={this.state.bookingSchedule}
     />)
+    renderPricingPage = () => (<PricingContainer user={this.state.user}/>)
 
   handleLogout = () => {
     this.setState(
@@ -142,6 +194,8 @@ class App extends Component {
           username: null,
           token: null,
         },
+        schedule: null,
+        bookingSchedule: null,
       },
       );
       localStorage.clear();
@@ -160,9 +214,10 @@ class App extends Component {
       <Route path="/user" render={this.renderUserPage}/>
       <Route path="/instructor" render={this.renderInstructorsPage}/>
       <Route path="/schedule" render={this.renderSchedulePage}/>
-      <Route exact path="/pricing" component={PricingContainer}/>
+      <Route path="/pricing" render={this.renderPricingPage}/>
       <Route path="/login" render={this.renderLoginPage}/>
       </Switch>
+      {/* <ShowVideo/> */}
   
      
       <Footer/>

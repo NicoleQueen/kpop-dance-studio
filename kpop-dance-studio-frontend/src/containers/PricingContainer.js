@@ -23,7 +23,17 @@ const PricingContainer = (props) => {
                     <li>Further inquiries can be made </li> 
                     <li>at the information desk.</li> 
                 </ul> 
-                <a href="#" class="pricingTable-signup">sign up</a> 
+                {
+                    props.user.id ? (
+                        
+                        <a href="/user/price" class="pricingTable-signup">Purchase</a> 
+                        
+                      ) : (
+                        <a href="/login" class="pricingTable-signup">Purchase</a> 
+                      
+                      )
+                }
+                {/* <a href="/user/price" class="pricingTable-signup">Purchase</a>  */}
             </div> 
         </div> 
  
@@ -45,7 +55,17 @@ const PricingContainer = (props) => {
                     <li>Further inquiries can be made </li> 
                     <li>at the information desk.</li> 
                 </ul> 
-                <a href="#" class="pricingTable-signup">sign up</a> 
+                {
+                    props.user.id ? (
+                        
+                        <a href="/user/price" class="pricingTable-signup">Purchase</a> 
+                        
+                      ) : (
+                        <a href="/login" class="pricingTable-signup">Purchase</a> 
+                      
+                      )
+                }
+                {/* <a href="/user/price" class="pricingTable-signup">Purchase</a>  */}
             </div> 
         </div> 
         <div class="col-md-4 col-sm-6"> 
@@ -66,7 +86,17 @@ const PricingContainer = (props) => {
                     <li>Further inquiries can be made </li> 
                     <li>at the information desk.</li> 
                 </ul> 
-                <a href="#" class="pricingTable-signup">sign up</a> 
+                {
+                    props.user.id ? (
+                        
+                        <a href="/user/price" class="pricingTable-signup">Purchase</a> 
+                        
+                      ) : (
+                        <a href="/login" class="pricingTable-signup">Purchase</a> 
+                      
+                      )
+                }
+                {/* <a href="/user/price" class="pricingTable-signup">Purchase</a>  */}
             </div> 
         </div> 
     </div> 
