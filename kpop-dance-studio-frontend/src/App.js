@@ -139,7 +139,7 @@ class App extends Component {
   //   <Redirect to={'/instructor'}/>
   // )
   showVideoPage = (schedule) => {
-    // console.log(schedule)
+    console.log(schedule)
     // <Redirect to={'/user/video'}/>
     this.state.user.id ? (
       this.setState({ schedule: schedule }) &&

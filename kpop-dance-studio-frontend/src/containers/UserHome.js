@@ -20,8 +20,9 @@ class UserHome extends Component {
     render() {
         return (<div className="UserHome">
           {/* <MapContainer/> */}
+          <PaymentForm/>
           
-          <Switch>
+          {/* <Switch>
 
 <Route exact path="/" component={Home}/>
           <Route exact path="/user" render={this.props.renderSchedulePage}/>
@@ -35,7 +36,7 @@ class UserHome extends Component {
 <Route path="/user/pay" render={this.renderPaymentPage}/>
 
 
-</Switch>
+</Switch> */}
 
         </div>)
       }
