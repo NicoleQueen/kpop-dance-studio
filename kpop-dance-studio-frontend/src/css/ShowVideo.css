@@ -1,0 +1,48 @@
+.Book { 
+  display: inline-block; 
+  padding: 8px 40px; 
+  background: #fca4a7; 
+  font-size: 15px; 
+  font-weight: 600; 
+  color: #fff; 
+  text-transform: capitalize; 
+  border: 2px solid #fca4a7; 
+  border-radius: 30px; 
+  transition: all 0.5s ease 0s; 
+  margin-top: 65px;
+} 
+
+.video_page {
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width:fit-content;
+  margin:0 auto;
+  margin-top:50px;
+}
+
+.image {
+  margin-right: 12px;
+  border: 0.5px solid rgb(211, 234, 240);
+  border-radius: 50%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 50px;
+  height: 50px;
+}
+
+.video_infor {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  margin-top: 45px;
+  margin-left: 0px; 
+  text-align: left;
+  
+      
+}
+
+.infor {
+display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  
+}
+

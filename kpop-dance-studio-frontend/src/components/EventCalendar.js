@@ -23,7 +23,7 @@ class EventCalendar extends Component {
     //   />
   }
 
-  allEvents = (props) => {
+  allEvents = () => {
       return this.props.schedules.map(schedule => {
         return {title: schedule.instructor.name + schedule.time, date: schedule.date}
       })

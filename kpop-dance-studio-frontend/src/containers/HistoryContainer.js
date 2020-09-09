@@ -6,10 +6,15 @@ import OrderHistory from "../components/OrderHistory"
 class HistoryContainer extends Component {
   
     render() {
-      console.log(this.props)
+      // console.log(this.props)
         return (<div>
-          <BookHistory bookingSchedule={this.props.bookingSchedule}/>
-          <OrderHistory/>
+          <BookHistory 
+            bookingSchedule={this.props.bookingSchedule} 
+            bookings={this.props.bookings}
+            user={this.props.user}/>
+          <OrderHistory 
+            packages={this.props.packages} 
+            user={this.props.user}/>
         </div>)
       }
 }

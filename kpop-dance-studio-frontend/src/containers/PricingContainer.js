@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/PricingContainer.css";
+import { Link } from "react-router-dom";
+
 const PricingContainer = (props) => {
     return (<div >
 
@@ -26,10 +28,10 @@ const PricingContainer = (props) => {
                 {
                     props.user.id ? (
                         
-                        <a href="/user/price" class="pricingTable-signup">Purchase</a> 
+                        <a href="/user/price" class="pricingTable-signup">Signup</a> 
                         
                       ) : (
-                        <a href="/login" class="pricingTable-signup">Purchase</a> 
+                        <a href="/login" class="pricingTable-signup">Signup</a> 
                       
                       )
                 }
@@ -58,14 +60,14 @@ const PricingContainer = (props) => {
                 {
                     props.user.id ? (
                         
-                        <a href="/user/price" class="pricingTable-signup">Purchase</a> 
+                        <a href="/user/price" class="pricingTable-signup">Signup</a> 
                         
                       ) : (
-                        <a href="/login" class="pricingTable-signup">Purchase</a> 
+                        <a href="/login" class="pricingTable-signup">Signup</a> 
                       
                       )
                 }
-                {/* <a href="/user/price" class="pricingTable-signup">Purchase</a>  */}
+                
             </div> 
         </div> 
         <div class="col-md-4 col-sm-6"> 
@@ -89,14 +91,18 @@ const PricingContainer = (props) => {
                 {
                     props.user.id ? (
                         
-                        <a href="/user/price" class="pricingTable-signup">Purchase</a> 
+                        <Link to="/user/paymentform" 
+                            class="pricingTable-signup" 
+                            type="click"
+                            onClick={() => props.handlePayment(129.99, 3)}
+                            >Signup</Link> 
                         
                       ) : (
-                        <a href="/login" class="pricingTable-signup">Purchase</a> 
+                        <a href="/login" class="pricingTable-signup">Signup</a> 
                       
                       )
                 }
-                {/* <a href="/user/price" class="pricingTable-signup">Purchase</a>  */}
+                
             </div> 
         </div> 
     </div> 

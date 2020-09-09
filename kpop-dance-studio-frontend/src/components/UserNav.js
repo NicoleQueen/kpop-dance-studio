@@ -26,10 +26,10 @@ class UserNav extends Component {
             {this.props.user.username} 
           </a>
             
-          <a class="nav-link" href="user/history" type="click" id="history">
+          <a class="nav-link" href="/user/history" type="click" id="history">
               History
             </a>
-            <a class="nav-link" href="user/route" type="click" id="route">
+            <a class="nav-link" href="/user/route" type="click" id="route">
               Route
             </a>
 

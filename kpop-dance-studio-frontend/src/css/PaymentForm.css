@@ -1,0 +1,35 @@
+.pricingTable-signup{ 
+  display: inline-block; 
+  padding: 8px 40px; 
+  background: #fca4a7; 
+  font-size: 15px; 
+  font-weight: 600; 
+  color: #fff; 
+  text-transform: capitalize; 
+  border: 2px solid #fca4a7; 
+  border-radius: 30px; 
+  transition: all 0.5s ease 0s; 
+  margin-top: 60px;
+} 
+
+.Payment {
+  padding-top: 90px;
+  
+}
+
+.list {
+  text-align: left;
+  margin-top: 90px; 
+  margin-left: 60px;   
+
+}
+
+.item {
+  padding-top: 15px;
+  font-family: Times, Times New Roman, serif;
+}
+
+.order {
+  font-size: 28px; 
+  font-family: Times, Times New Roman, serif;
+}

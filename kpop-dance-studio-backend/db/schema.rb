@@ -17,11 +17,9 @@ ActiveRecord::Schema.define(version: 2020_08_27_173116) do
 
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "package_id", null: false
     t.bigint "schedule_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["package_id"], name: "index_bookings_on_package_id"
     t.index ["schedule_id"], name: "index_bookings_on_schedule_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -36,8 +34,8 @@ ActiveRecord::Schema.define(version: 2020_08_27_173116) do
   end
 
   create_table "packages", force: :cascade do |t|
-    t.integer "counts"
-    t.integer "price"
+    t.integer "kind"
+    t.float "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -63,7 +61,6 @@ ActiveRecord::Schema.define(version: 2020_08_27_173116) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "bookings", "packages"
   add_foreign_key "bookings", "schedules"
   add_foreign_key "bookings", "users"
   add_foreign_key "packages", "users"

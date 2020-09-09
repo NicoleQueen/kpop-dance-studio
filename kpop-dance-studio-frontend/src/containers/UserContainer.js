@@ -30,7 +30,14 @@ const UserContainer = (props) => {
       <Paper className={useStyles().paper} id="paper2">
            <UserHome instructors={props.instructors} renderInstructorsPage={props.renderInstructorsPage} 
            renderSchedulePage={props.renderSchedulePage} showVideoPage={props.showVideoPage} renderVideoPage={props.renderVideoPage}
-           bookingSchedule={props.bookingSchedule}/> 
+           bookingSchedule={props.bookingSchedule} user={props.user} renderPricingPage={props.renderPricingPage} 
+           handlePayment={props.handlePayment} payment={props.payment} schedules={props.schedules}
+           bookings={props.bookings}
+           packages={props.packages}
+           user={props.user}
+           schedule={props.schedule}
+           addPackage_db={props.addPackage_db}
+           /> 
       </Paper>
       </BrowserRouter>
       </Grid>

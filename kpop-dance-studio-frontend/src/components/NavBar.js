@@ -52,7 +52,7 @@ class Navbar extends Component {
           </a>
           {/* )}  */}
           {this.props.userId ? (
-            <a class="nav-link" href="user/instructor" id={"about1"} >
+            <a class="nav-link" href="/user/instructor" id={"about1"} >
             Instructor
           </a>
           ) : (
@@ -62,7 +62,7 @@ class Navbar extends Component {
           </a>
           )}
           {this.props.userId ? (
-            <a class="nav-link" href="user" id={"about2"} >
+            <a class="nav-link" href="/user" id={"about2"} >
             Schedule
           </a>
           ) : (
@@ -72,7 +72,7 @@ class Navbar extends Component {
           </a>
           )}
           {this.props.userId ? (
-            <a class="nav-link" href="user/pricing" id={"about3"}>
+            <a class="nav-link" href="/user/pricing" id={"about3"}>
             Pricing
           </a>
           ) : (

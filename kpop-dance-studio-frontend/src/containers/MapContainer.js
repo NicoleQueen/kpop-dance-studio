@@ -6,22 +6,28 @@ function Map() {
     return <GoogleMap
     defaultZoom={10}
     defaultCenter={{lat: 37.5665, lng: 126.9780}}
-  />
-//     <Marker
-//     //   defaultPosition={props.center}
-//     //   title="Click to zoom"
-//     //   onClick={props.onMarkerClick}
-//     />
+  >
+    <Marker
+    //   defaultPosition={props.center}
+    position={{lat: 37.541534, lng: 127.057302}}
+      title="Click to zoom"
+      icon={{
+        url: "/path/to/custom_icon.png",
+        // anchor: new google.maps.Point(32,32),
+        // scaledSize: new google.maps.Size(64,64)
+      }}
+    //   onClick={props.onMarkerClick}
+    />
 
-//     {/* <Marker
-//       defaultPosition={props.marker2center}
-//       title="Click to zoom"
-//       onClick={props.onMarkerClick}
-//     /> */}
+    {/* <Marker
+      defaultPosition={props.marker2center}
+      title="Click to zoom"
+      onClick={props.onMarkerClick}
+    />  */}
 
 
 
-//   </GoogleMap>
+  </GoogleMap>
 }
 
 const WrappedMap = withScriptjs(withGoogleMap(Map))
