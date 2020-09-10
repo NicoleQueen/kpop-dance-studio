@@ -1,0 +1,15 @@
+.EditUser {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.sign-up-htm {
+  top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}

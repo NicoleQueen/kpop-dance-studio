@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.create(user_id: booking_params[:user_id], schedule_id: booking_params[:schedule_id])
+    render json: @booking
   end
 
   private

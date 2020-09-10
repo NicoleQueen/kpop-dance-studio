@@ -6,6 +6,7 @@ class PackagesController < ApplicationController
 
     def create
       @package = Package.create(kind: package_params[:kind], price: package_params[:price], user_id: package_params[:user_id])
+      render json: @package
     end
   
     private

@@ -21,6 +21,18 @@ class UsersController < ApplicationController
       end
   end 
 
+  def update
+    # byebug
+    @user = User.find(params[:id])
+    if params[:password] != ""
+    @user.update(username: params[:username], password: params[:password], email: params[:email], image: params[:image])
+    else
+        @user.update(username: params[:username], email: params[:email], image: params[:image])
+    end
+    render json: @user
+
+  end
+
   def login
       @user = User.find_by(username:params[:username])
       

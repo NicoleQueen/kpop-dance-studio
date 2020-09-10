@@ -104,8 +104,9 @@ class App extends Component {
   };
 
   handleSignup = (e, userInfo) => {
+    console.log(e.target)
     e.preventDefault();
-    // console.log(e, userInfo);
+    console.log(e, userInfo);
     fetch("http://localhost:3000/users", {
       method: "POST",
       headers: {
@@ -119,11 +120,15 @@ class App extends Component {
         if (!json.error) {
           // this.renderLoginPage();
           this.props.history.push("/login");
+          alert("Succeed signup!");
+          
           // this.handleAuthResponse(json);
         } else {
           alert(json.error);
         }
-      });
+      })
+      .then(e.target.reset())
+      .then(e.target.reset()) 
   };
 
   fetchInstructors = () => {
@@ -228,7 +233,7 @@ class App extends Component {
       this.setState({
         bookings: [...this.state.bookings, json]
       });
-      // this.fetchBookings()
+      this.fetchUsers()
     })
   }
 
@@ -264,9 +269,31 @@ class App extends Component {
       this.setState({
         packagess: [...this.state.packages, json]
       });
-      // this.fetchPackages()
+      this.fetchUsers()
     })
   }
+
+  handleUpdateProfile = (e, userInfo) => {
+    e.preventDefault()
+    fetch(`http://localhost:3000/users/${this.state.user.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userInfo),
+    })
+    .then((res) => res.json())
+    .then((json) => {
+      this.setState({
+        user: 
+        {
+          username: userInfo.username,
+        }
+      });
+      this.fetchUsers()
+    })
+  }
+
  
   renderSchedulePage = () => (<ScheduleContainer schedules={this.state.schedules} showVideoPage={this.showVideoPage}/>)
   renderLoginPage = () => (<Login handleLogin={this.handleLogin} handleSignup={this.handleSignup}/>)
@@ -285,6 +312,7 @@ class App extends Component {
     schedule={this.state.schedule}
     handlePayment={this.handlePayment}
     addPackage_db={this.addPackage_db}
+    handleUpdateProfile={this.handleUpdateProfile}
     />)
     renderPricingPage = () => (<PricingContainer user={this.state.user} handlePayment={this.handlePayment}/>)
 

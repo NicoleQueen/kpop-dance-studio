@@ -35,8 +35,10 @@ const UserContainer = (props) => {
            bookings={props.bookings}
            packages={props.packages}
            user={props.user}
+           users={props.users}
            schedule={props.schedule}
            addPackage_db={props.addPackage_db}
+           handleUpdateProfile={props.handleUpdateProfile}
            /> 
       </Paper>
       </BrowserRouter>

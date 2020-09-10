@@ -42,8 +42,9 @@ function PaymentForm(props) {
     setSuccess(false)
     // console.log(props)
     // console.log(success)
+  
     props.addPackage_db(product.price)
-
+    
     return props.history.push("/user/success")
     // return (
     //   <div>

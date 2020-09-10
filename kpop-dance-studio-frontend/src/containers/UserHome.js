@@ -10,6 +10,7 @@ import ShowVideo from "../components/ShowVideo.js";
 import PaymentForm from "../components/PaymentForm.js";
 import MapHome from "./MapHome"
 import OrderSuccess from "../components/OrderSuccess"
+import EditUserForm from "../components/EditUserForm"
 
 
 // const renderVideoPage = (props) => {
@@ -25,6 +26,12 @@ import OrderSuccess from "../components/OrderSuccess"
 // }
 class UserHome extends Component {
 
+  currentUserInfor = () => {
+    return this.props.users.filter(
+      item => item.id === this.props.user.id
+    )[0]
+  }
+
   renderMapPage = () => (<MapContainer/>)
   renderHistoryPage = () => (<HistoryContainer bookings={this.props.bookings}
     packages={this.props.packages} bookingSchedule={this.props.bookingSchedule}
@@ -37,6 +44,14 @@ class UserHome extends Component {
       handlePayment={this.props.handlePayment}
       user={this.props.user}
       addPackage_db={this.props.addPackage_db}
+      />)
+
+  renderEditUserForm = (props) => (<EditUserForm 
+      {...props} 
+      user={this.props.user} 
+      users={this.props.users}
+      handleUpdateProfile={this.props.handleUpdateProfile}
+      currentUserInfor={this.currentUserInfor()}
       />)
   // renderVideoPage = (props) => {
   //   // this.setState({ schedule: this.state.schedules[0] })
@@ -69,7 +84,7 @@ class UserHome extends Component {
             <Route exact path="/user/history" render={this.renderHistoryPage}/>
             <Route path="/user/success" component={OrderSuccess}/>
             <Route path="/user/paymentform" render={(props) => this.renderPaymentPage(props) }/>
-
+            <Route path="/user/edituserform" render={(props) => this.renderEditUserForm(props) }/>
         </Switch> 
 
         </div>)
