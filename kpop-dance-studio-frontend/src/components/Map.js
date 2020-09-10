@@ -3,8 +3,8 @@ import { withGoogleMap, GoogleMap, withScriptjs, InfoWindow, Marker } from "reac
 import Geocode from "react-geocode";
 import Autocomplete from "react-google-autocomplete"
 import "../css/map.css";
-// import { GoogleMapsAPI } from '../client-config';
-Geocode.setApiKey("AIzaSyBxwR6notn465gyycn9qhosQQqbrzMt1Nw");
+
+Geocode.setApiKey(process.env.REACT_APP_GOOGLE_KEY);
 Geocode.enableDebug();
 
 class Map extends Component{
@@ -228,7 +228,7 @@ class Map extends Component{
 						{/* InfoWindow on top of marker */}
 						<InfoWindow
 							onClose={this.onInfoWindowClose}
-							position={{ lat: ( this.state.markerPosition.lat + 0.0015 ), lng: this.state.markerPosition.lng }}
+							position={{ lat: ( this.state.markerPosition.lat + 0.0016 ), lng: this.state.markerPosition.lng }}
 						>
 							<div>
               <span style={{ padding: 0, margin: 0 }}><span>❤️</span> Kpop Dance Studio <span>❤️</span></span>
@@ -237,10 +237,10 @@ class Map extends Component{
 						</InfoWindow>
             <InfoWindow
 							onClose={this.onInfoWindowClose}
-							position={{ lat: ( 37.546472 + 0.0015 ), lng: 127.065645 }}
+							position={{ lat: ( 37.546472 + 0.0016 ), lng: 127.065645 }}
 						>
 							<div>
-              <span style={{ padding: 0, margin: 0 }}><span>❤️</span> {this.props.user != null && this.props.user.username} you are here! <span>❤️</span></span>
+              <span style={{ padding: 0, margin: 0 }}><span>❤️</span> {this.props.user != null && this.props.user.username} You are here! <span>❤️</span></span>
 								{/* <span style={{ padding: 0, margin: 0 }}>{ this.state.address }</span> */}
 							</div>
 						</InfoWindow>

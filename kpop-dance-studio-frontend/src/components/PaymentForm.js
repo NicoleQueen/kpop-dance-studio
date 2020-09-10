@@ -62,7 +62,7 @@ function PaymentForm(props) {
         </div>
         <StripeCheckout
           token={makePayment}
-          stripeKey="pk_test_51HNMXKLGKkhCcxJ1eq5VkxxIw6NlOmjrAVrq5MKjB4MUCvJHF6i0KsEVSczm6t7tmgIQQEZusITRE36BklCRqhSe00B0Z1qecy"
+          stripeKey=""
           name="Kpop Dance Studio ^@^"
           amount={product.price * 100}
         >
