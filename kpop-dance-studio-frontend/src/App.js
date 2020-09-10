@@ -104,7 +104,7 @@ class App extends Component {
   };
 
   handleSignup = (e, userInfo) => {
-    console.log(e.target)
+    console.log(userInfo)
     e.preventDefault();
     console.log(e, userInfo);
     fetch("http://localhost:3000/users", {
@@ -128,7 +128,7 @@ class App extends Component {
         }
       })
       .then(e.target.reset())
-      .then(e.target.reset()) 
+      .then(userInfo.checked = "signin", userInfo.username = "", userInfo.password = "", userInfo.email = "") 
   };
 
   fetchInstructors = () => {
@@ -291,6 +291,7 @@ class App extends Component {
         }
       });
       this.fetchUsers()
+      this.props.history.push("/user")
     })
   }
 

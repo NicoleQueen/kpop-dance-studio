@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap, withScriptjs, InfoWindow, Marker } from "react-google-maps";
 import Geocode from "react-geocode";
-import Autocomplete from 'react-google-autocomplete';
+import Autocomplete from "react-google-autocomplete"
+import "../css/map.css";
 // import { GoogleMapsAPI } from '../client-config';
-// Geocode.setApiKey( GoogleMapsAPI );
-// Geocode.enableDebug();
+Geocode.setApiKey("AIzaSyBxwR6notn465gyycn9qhosQQqbrzMt1Nw");
+Geocode.enableDebug();
 
 class Map extends Component{
 
@@ -16,13 +17,17 @@ class Map extends Component{
 			area: '',
 			state: '',
 			mapPosition: {
-				lat: this.props.center.lat,
+				lat: this.props.center.lat, 
 				lng: this.props.center.lng
 			},
 			markerPosition: {
 				lat: this.props.center.lat,
 				lng: this.props.center.lng
-			}
+      },
+      // markerPosition: {
+			// 	lat: 37.546472 ,
+			// 	lng: 127.065645
+			// }
 		}
 	}
 	/**
@@ -31,6 +36,7 @@ class Map extends Component{
 	componentDidMount() {
 		Geocode.fromLatLng( this.state.mapPosition.lat , this.state.mapPosition.lng ).then(
 			response => {
+        console.log('res', response)
 				const address = response.results[0].formatted_address,
 				      addressArray =  response.results[0].address_components,
 				      city = this.getCity( addressArray ),
@@ -136,7 +142,9 @@ class Map extends Component{
 	 */
 	onInfoWindowClose = ( event ) => {
 
-	};
+  };
+  
+  
 
 	/**
 	 * When the marker is dragged you get the lat and long using the functions available from event object.
@@ -209,6 +217,7 @@ class Map extends Component{
 
 
 	render(){
+    console.log(this.props.user) 
 		const AsyncMap = withScriptjs(
 			withGoogleMap(
 				props => (
@@ -219,18 +228,36 @@ class Map extends Component{
 						{/* InfoWindow on top of marker */}
 						<InfoWindow
 							onClose={this.onInfoWindowClose}
-							position={{ lat: ( this.state.markerPosition.lat + 0.0018 ), lng: this.state.markerPosition.lng }}
+							position={{ lat: ( this.state.markerPosition.lat + 0.0015 ), lng: this.state.markerPosition.lng }}
 						>
 							<div>
-								<span style={{ padding: 0, margin: 0 }}>{ this.state.address }</span>
+              <span style={{ padding: 0, margin: 0 }}><span>❤️</span> Kpop Dance Studio <span>❤️</span></span>
+								{/* <span style={{ padding: 0, margin: 0 }}>{ this.state.address }</span> */}
 							</div>
 						</InfoWindow>
+            <InfoWindow
+							onClose={this.onInfoWindowClose}
+							position={{ lat: ( 37.546472 + 0.0015 ), lng: 127.065645 }}
+						>
+							<div>
+              <span style={{ padding: 0, margin: 0 }}><span>❤️</span> {this.props.user != null && this.props.user.username} you are here! <span>❤️</span></span>
+								{/* <span style={{ padding: 0, margin: 0 }}>{ this.state.address }</span> */}
+							</div>
+						</InfoWindow>
+
 						{/*Marker*/}
 						<Marker google={this.props.google}
+						        name={'Kpop Dance Studio'}
+						        draggable={false}
+						        onDragEnd={ this.onMarkerDragEnd }
+						        position={{ lat: this.state.markerPosition.lat, lng: this.state.markerPosition.lng }}
+						/>
+						<Marker />
+            <Marker google={this.props.google}
 						        name={'Dolores park'}
 						        draggable={true}
 						        onDragEnd={ this.onMarkerDragEnd }
-						        position={{ lat: this.state.markerPosition.lat, lng: this.state.markerPosition.lng }}
+						        position={{ lat: 37.546472, lng: 127.065645 }}
 						/>
 						<Marker />
 						{/* For Auto complete Search Box */}
@@ -239,11 +266,13 @@ class Map extends Component{
 								width: '100%',
 								height: '40px',
 								paddingLeft: '16px',
-								marginTop: '2px',
-								marginBottom: '500px'
+								marginTop: '15px',
+                marginBottom: '50px',
+                
 							}}
 							onPlaceSelected={ this.onPlaceSelected }
-							types={['(regions)']}
+              types={['(regions)']}
+              componentRestrictions={{country: "kor"}}
 						/>
 					</GoogleMap>
 				)
@@ -252,7 +281,19 @@ class Map extends Component{
 		let map;
 		if( this.props.center.lat !== undefined ) {
 			map = <div>
-				<div>
+        <AsyncMap
+					googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_KEY}&libraries=places`}
+					loadingElement={
+						<div style={{ height: `100%` }} />
+					}
+					containerElement={
+						<div style={{ height: this.props.height }} />
+					}
+					mapElement={
+						<div style={{ height: `100%` }} />
+					}
+				/>
+				<div className="form_infor">
 					<div className="form-group">
 						<label htmlFor="">City</label>
 						<input type="text" name="city" className="form-control" onChange={ this.onChange } readOnly="readOnly" value={ this.state.city }/>
@@ -271,18 +312,7 @@ class Map extends Component{
 					</div>
 				</div>
 
-				<AsyncMap
-					googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_KEY}&libraries=places`}
-					loadingElement={
-						<div style={{ height: `100%` }} />
-					}
-					containerElement={
-						<div style={{ height: this.props.height }} />
-					}
-					mapElement={
-						<div style={{ height: `100%` }} />
-					}
-				/>
+				
 			</div>
 		} else {
 			map = <div style={{height: this.props.height}} />

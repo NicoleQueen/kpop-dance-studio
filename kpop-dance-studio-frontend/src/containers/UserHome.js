@@ -12,18 +12,6 @@ import MapHome from "./MapHome"
 import OrderSuccess from "../components/OrderSuccess"
 import EditUserForm from "../components/EditUserForm"
 
-
-// const renderVideoPage = (props) => {
-//   // this.setState({ schedule: this.state.schedules[0] })
-//   // console.log(this.state.schedules[0])
-//   // if (this.state.schedule) {
-//   console.log('a')
-//   //   console.log(this.state.schedule)
-//   // } else {
-//   //   console.log("a")
-//   // }
-//   return <ShowVideo {...props} schedule={this.props.schedule} />
-// }
 class UserHome extends Component {
 
   currentUserInfor = () => {
@@ -32,7 +20,7 @@ class UserHome extends Component {
     )[0]
   }
 
-  renderMapPage = () => (<MapContainer/>)
+  renderMapPage = () => (<MapHome user={this.props.user}/>)
   renderHistoryPage = () => (<HistoryContainer bookings={this.props.bookings}
     packages={this.props.packages} bookingSchedule={this.props.bookingSchedule}
     user={this.props.user}/>)
@@ -70,7 +58,7 @@ class UserHome extends Component {
         return (<div className="UserHome">
           {/* <MapContainer/> */}
           {/* <PaymentForm/> */}
-          {/* <MapHome/> */}
+          {/* <MapHome user={this.props.user}/> */}
           {/* <OrderSuccess/> */}
          
         <Switch>

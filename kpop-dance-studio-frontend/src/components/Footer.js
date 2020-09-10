@@ -32,7 +32,7 @@ const Footer = (props) => {
           </li>
           <li class="list-inline-item">
             <a class="btn-floating btn-dribbble mx-1">
-              <i class="fab fa-dribbble"> </i>
+              <i className="fab fa-instagram"> </i>
             </a>
           </li>
         </ul>

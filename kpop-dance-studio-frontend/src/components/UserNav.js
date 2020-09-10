@@ -9,7 +9,7 @@ class UserNav extends Component {
     (item) => item.id === this.props.user.id
   );
   console.log(currentUser[0])
-  currentUser.length > 0 && !currentUser[0].image && (currentUser[0].image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTExtoLVhMIfPRj_8d5RQKF2qjwUbuYL2tZTg&usqp=CAU')
+  currentUser.length > 0 && !currentUser[0].image && (currentUser[0].image = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSs-bsLd6mUlSjhP9DNiVnSa4QfLCa4u9kKbg&usqp=CAU')
   //console.log(currentUser[0].image)
 
   // static defaultCurrentUser = {currentUser.length > 0 && currentUser[0].image: }
