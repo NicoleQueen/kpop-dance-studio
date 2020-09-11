@@ -14,7 +14,8 @@ import UserContainer from "./containers/UserContainer.js";
 import { Redirect } from "react-router-dom";
 import { Route, Switch, NavLink, withRouter } from "react-router-dom";
 import ShowVideo from "./components/ShowVideo";
-
+// improt Nothing from "./components/Nothing"
+import Nothing from "./components/Nothing";
 class App extends Component {
   state = {
     user: {
@@ -355,7 +356,7 @@ class App extends Component {
       </Switch>
       {/* <ShowVideo/> */}
   
-     
+     {/* <Nothing/> */}
       <Footer/>
     </div>
   );

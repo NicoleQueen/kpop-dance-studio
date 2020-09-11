@@ -217,7 +217,7 @@ class Map extends Component{
 
 
 	render(){
-    console.log(this.props.user) 
+    // console.log(this.props.user) 
 		const AsyncMap = withScriptjs(
 			withGoogleMap(
 				props => (
@@ -240,7 +240,7 @@ class Map extends Component{
 							position={{ lat: ( 37.546472 + 0.0016 ), lng: 127.065645 }}
 						>
 							<div>
-              <span style={{ padding: 0, margin: 0 }}><span>❤️</span> {this.props.user != null && this.props.user.username} You are here! <span>❤️</span></span>
+              <span style={{ padding: 0, margin: 0 }}><span>❤️</span> You are here! <span>❤️</span></span>
 								{/* <span style={{ padding: 0, margin: 0 }}>{ this.state.address }</span> */}
 							</div>
 						</InfoWindow>

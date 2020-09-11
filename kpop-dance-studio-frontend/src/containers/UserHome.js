@@ -41,20 +41,9 @@ class UserHome extends Component {
       handleUpdateProfile={this.props.handleUpdateProfile}
       currentUserInfor={this.currentUserInfor()}
       />)
-  // renderVideoPage = (props) => {
-  //   // this.setState({ schedule: this.state.schedules[0] })
-  //   // console.log(this.state.schedules[0])
-  //   // if (this.state.schedule) {
-  //   console.log('a')
-  //   //   console.log(this.state.schedule)
-  //   // } else {
-  //   //   console.log("a")
-  //   // }
-  //   return <ShowVideo {...props} schedule={this.props.schedule} />
-  // }
 
   render() {
-    console.log(this.props)
+    // console.log(this.props)
         return (<div className="UserHome">
           {/* <MapContainer/> */}
           {/* <PaymentForm/> */}
