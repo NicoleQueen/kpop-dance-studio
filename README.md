@@ -59,9 +59,9 @@
 
 ## Demo
 
-part 1,
+part 1, home page && instructor page.
 
-[![Demo CountPages alpha](https://j.gifs.com/MwRKyQ.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
+[![Demo CountPages alpha](https://j.gifs.com/mOK66O.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
 part 2,
 
