@@ -51,10 +51,10 @@
 ## Built with
 
 <ul>
-  <li>Ruby 2.6.1</li>
-  <li>JavaScript</li>
-  <li>React 16.13.1</li>
-  <li>PostgreSQL</li>
+  <li>Backend : Rails</li>
+  <li>Frontend : React</li>
+  <li>Database : PostgreSQL</li>
+  <li>API : Stripe API && Google Map API</li>
 </ul>
 
 ## Demo
