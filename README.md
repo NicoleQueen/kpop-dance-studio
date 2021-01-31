@@ -23,30 +23,16 @@
   </a>
 </div>
 
-## Demo
-
-part 1,
-
-[![Demo CountPages alpha](https://j.gifs.com/MwRKyQ.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
-
-part 2,
-
-[![Demo CountPages alpha](https://j.gifs.com/71oyQw.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
-
-part 3,
-
-[![Demo CountPages alpha](https://j.gifs.com/zv14Lr.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
-
 ## Installation
 
 <ol>
-  <li>Fork and clone this repository. $git clone https://github.com/NicoleQueen/slackChat</li>
-  <li>Navigate into the slackChat_backend directory. $cd slackChat_backend</li>
+  <li>Fork and clone this repository. $git clone https://github.com/NicoleQueen/kpop-dance-studio</li>
+  <li>Navigate into the kpop-dance-studio-backend directory. $cd kpop-dance-studio-backend</li>
   <li>Enter the command 'bundle install' in the terminal. $bundle install</li>
   <li>Run "rails db:migrate" in the terminal. $rails db:migrate</li>
   <li>For testing data, in the ../db/seeds.rb file, uncomment the test data, and run "rails db:seed" in the terminal. $rails db:seed</li>
   <li>Run "rails server" to begin server. $rails server</li>
-  <li>Navigate into the slack-chat_frontend directory. $cd slack-chat_frontend</li>
+  <li>Navigate into the kpop-dance-studio-frontend directory. $cd kpop-dance-studio-frontend</li>
   <li>Enter the command "npm install" in the terminal. $npm install</li>
   <li>Run "npm start" to view the website. $npm start</li>
 </ol>
@@ -70,6 +56,20 @@ part 3,
   <li>React 16.13.1</li>
   <li>PostgreSQL</li>
 </ul>
+
+## Demo
+
+part 1,
+
+[![Demo CountPages alpha](https://j.gifs.com/MwRKyQ.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
+
+part 2,
+
+[![Demo CountPages alpha](https://j.gifs.com/71oyQw.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
+
+part 3,
+
+[![Demo CountPages alpha](https://j.gifs.com/zv14Lr.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
 
 ## Developer
 
