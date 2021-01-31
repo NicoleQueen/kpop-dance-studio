@@ -75,6 +75,10 @@ part 4, schedule && choose a class.
 
 [![Demo CountPages alpha](https://j.gifs.com/k8GKlX.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
+part 4, google map.
+
+[![Demo CountPages alpha](https://j.gifs.com/L7QD24.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
+
 ## Developer
 
 <div>Qiuyan Peng<div><br>
