@@ -63,13 +63,13 @@ part 1, home page && instructor page.
 
 [![Demo CountPages alpha](https://j.gifs.com/mOK66O.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
-part 2,
+part 2, schedule page && pricing page.
 
-[![Demo CountPages alpha](https://j.gifs.com/71oyQw.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
+[![Demo CountPages alpha](https://j.gifs.com/BNDp7X.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
-part 3,
+part 3, payment Stripe API.
 
-[![Demo CountPages alpha](https://j.gifs.com/zv14Lr.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
+[![Demo CountPages alpha](https://j.gifs.com/YWjxBK.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
 ## Developer
 
