@@ -81,7 +81,7 @@ part 4, schedule && choose a class.
 
 part 5, google map.
 
-[![Demo CountPages alpha](https://j.gifs.com/L7QD24.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
+[![Demo CountPages alpha](https://j.gifs.com/L7QDR4.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
 ## Developer
 
@@ -95,4 +95,6 @@ part 5, google map.
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2020-present, [Qiuyan Peng](https://www.linkedin.com/in/qiuyan-peng-12b90b93/).
+
+All information from 1 MILLION dance studio @ Seoul.
 
