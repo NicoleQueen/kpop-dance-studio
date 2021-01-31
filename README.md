@@ -61,7 +61,7 @@
 
 part 1, home page && instructor page.
 
-[![Demo CountPages alpha](https://j.gifs.com/mOK66O.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
+[![Demo CountPages alpha](https://j.gifs.com/71oyQw.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
 part 2,
 
