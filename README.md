@@ -61,15 +61,15 @@
 
 part 1,
 
-[![Demo CountPages alpha](https://j.gifs.com/MwRKyQ.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
+[![Demo CountPages alpha](https://j.gifs.com/MwRKyQ.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
 part 2,
 
-[![Demo CountPages alpha](https://j.gifs.com/71oyQw.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
+[![Demo CountPages alpha](https://j.gifs.com/71oyQw.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
 part 3,
 
-[![Demo CountPages alpha](https://j.gifs.com/zv14Lr.gif)](https://www.youtube.com/watch?v=hsZ1ya5bK1s&feature=youtu.be)
+[![Demo CountPages alpha](https://j.gifs.com/zv14Lr.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
 ## Developer
 
