@@ -71,6 +71,10 @@ part 3, payment Stripe API.
 
 [![Demo CountPages alpha](https://j.gifs.com/YWjxBK.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
 
+part 4, schedule && choose a class.
+
+[![Demo CountPages alpha](https://j.gifs.com/k8GKlX.gif)](https://www.youtube.com/watch?v=CbwQh-mebZI)
+
 ## Developer
 
 <div>Qiuyan Peng<div><br>
