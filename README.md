@@ -40,10 +40,12 @@
 ## Features
 <ul>
   <li>Sign up as a new user or login as a returning user.</li>
-  <li>Into a channel to chat.</li>
-  <li>Write a post and submit.</li>
-  <li>Like posts which have submited.</li>
-  <li>Delete posts which have submited.</li>
+  <li>View and edit your profile.</li>
+  <li>Check the instructor and the schedule information.</li>
+  <li>Purchase courses package and book courses.</li>
+  <li>Check every course information.</li>
+  <li>Check purchasing and booking history.</li>
+  <li>Check the route from your location to this studio.</li>
   <li>Logout.</li>
 </ul>
 
