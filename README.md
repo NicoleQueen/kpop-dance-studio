@@ -8,7 +8,7 @@
 
 <div align="center" size="12">
   <strong>
-     A Kpop dance studio app which connect users and the studio created using a Ruby on Rails backend and React frontend. Users can get the information of the studio through the app. Purchase course and schedule class.
+     Designed and implemented a web app for clients of a Kpop dance studio created using a Ruby on Rails backend and React frontend. Users can get the information of the studio through the app. Purchase course and schedule class.
   </strong>
 </div>
 
@@ -40,13 +40,13 @@
 ## Features
 <ul>
   <li>Sign up as a new user or login as a returning user.</li>
-  <li>View and edit your profile.</li>
-  <li>Check the instructor and the schedule information.</li>
-  <li>Purchase courses package and book courses.</li>
-  <li>Check every course information.</li>
-  <li>Check purchasing and booking history.</li>
-  <li>Check the route from your location to this studio.</li>
-  <li>Logout.</li>
+  <li>View and edit user profile.</li>
+  <li>Check the instructor and their schedule.</li>
+  <li>Purchase course package (using Stripe API) and book courses with instructors.</li>
+  <li>Check all course information.</li>
+  <li>Check user purchas and booking history.</li>
+  <li>Check the route from user location to the dance studio (using Google Map API).</li>
+  <li>User logout</li>
 </ul>
 
 
