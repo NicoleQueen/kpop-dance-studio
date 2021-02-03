@@ -98,5 +98,5 @@ part 5, google map.
 
 Copyright (c) 2020-present, [Qiuyan Peng](https://www.linkedin.com/in/qiuyan-peng-12b90b93/).
 
-All information from 1 MILLION dance studio @ Seoul.
+All information is from 1 MILLION dance studio @ Seoul.
 
